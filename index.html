@@ -29,10 +29,10 @@
             </button>
           </div>
           <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
-            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Services</a>
-            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="Home">Home</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="Services">Services</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="About">About</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="Contact">Contact</a>
             <div @click.away="open = false" class="relative" x-data="{ open: true }">
             </div>    
           </nav>
@@ -45,7 +45,7 @@
     <h1 class="text-3xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-center mt-10">TOP 10 MOST USED WEBSITES AI</h1>
 
     <!-- component -->
-<div class=" pt-2 lg:pt-2 min-h-screen">
+<div id="Home" class=" pt-2 lg:pt-2 min-h-screen">
 
     <div class="bg-cover w-full flex justify-center items-center"
         style="background-image: url('/images/mybackground.jpeg');">
@@ -592,5 +592,37 @@
         </div>
     </div>
 </div>
+  <hr>
+  <div id="Services">
+    <!-- component -->
+<h1 class="text-3xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-center mt-10">TOP 10 MOST USED WEBSITES AI</h1>
+<div class="py-16 bg-gray-600 text-white font-[Poppins]">  
+    <div class="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
+        <div class="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">Graphic Design</h3>
+                    <p class="mb-6">Designers use things like images, colors, and fonts to create messages that people can easily understand. It's about more than just making things look good - it's about making information clear and engaging.</p>
+                </div>
+                <img src="https://tailus.io/sources/blocks/end-image/preview/images/graphic.svg" class="w-2/3 ml-auto -mb-12" alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">UI Design</h3>
+                    <p class="mb-6">This design prioritizes clarity and ease of use. There are no unnecessary features or decorations, and everything is focused on helping you add, manage, and check off your tasks.</p>
+                </div>
+                <img src="https://tailus.io/sources/blocks/end-image/preview/images/ui-design.svg" class="w-2/3 ml-auto" alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">UX Design</h3>
+                    <p class="mb-6">UX design, short for user experience design, is all about creating products (physical or digital) that are easy and enjoyable to use. It focuses on understanding the user's needs and designing an experience that meets those needs in a smooth, efficient way. Think of it like designing the path someone takes to complete a task with your product, making sure every step is clear and frustration-free.</p>
+                </div>
+                <img src="https://tailus.io/sources/blocks/end-image/preview/images/ux-design.svg" class="w-2/3 ml-auto " alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
 </body>
 </html>
