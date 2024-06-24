@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global AI</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+    
+<body class="bg-gray-600 text-white font-[Poppins]">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div>
+      <div class="antialiased">
+      <div class="w-full ">
+        <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+          <div class="flex flex-row items-center justify-between p-4">
+            <img src="https://cdn.vectorstock.com/i/500p/33/66/artificial-intelligence-icon-sign-logo-vector-49693366.jpg" class="w-20 mr-5 rounded-full" alt="">
+            <a class="text-3xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Global AI</a>
+            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Services</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+            <a class="px-4 py-2 mt-2 text-xl mr-3 font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+            <div @click.away="open = false" class="relative" x-data="{ open: true }">
+            </div>    
+          </nav>
+        </div>
+      </div>
+    </div>
+      </div>
+    <hr>
+
+    <h1 class="text-3xl font-semibold tracking-widest  uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-center mt-10">TOP 10 MOST USED WEBSITES AI</h1>
+
+    <!-- component -->
+<div class=" pt-2 lg:pt-2 min-h-screen">
+
+    <div class="bg-cover w-full flex justify-center items-center"
+        style="background-image: url('/images/mybackground.jpeg');">
+        <div class="w-full bg-gray-600 p-5  bg-opacity-40 backdrop-filter backdrop-blur-lg">
+            <div class="w-12/12 mx-auto rounded-2xl  p-5 bg-opacity-40 backdrop-filter backdrop-blur-lg">
+ 
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
+  
+                    <!-- Card 1 -->
+
+                    <article
+                        class="bg-white p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full rounded-lg object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/65a762d88d34c9b08de34039_659f1e3a57ce506fbcc81b42_who%2520owns%2520chatgpt_logo.png" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">1</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://openai.com/index/chatgpt/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sam_Altman_CropEdit_James_Tamim.jpg/220px-Sam_Altman_CropEdit_James_Tamim.jpg"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class=""> 
+                                        <p class="text-sm text-gray-500">Sam Altman | Published on 30/11/2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://openai.com/index/chatgpt/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Chat GPT
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+
+                    <!-- Card 2 -->
+
+<article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://assets-global.website-files.com/64f605bdfa749671fed117a9/654eb33e5f9aec89e1949f75_Supermeme%20AI.png" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">2</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://www.supermeme.ai/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://media.licdn.com/dms/image/C5103AQGS8CDxke76-A/profile-displayphoto-shrink_200_200/0/1559829070084?e=2147483647&v=beta&t=7xA3YTSCf4zNYA_fTxojlul7O0CiSCdyn0AFnpOg-e0"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Ramsri Goutham | Published on 28/5/2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://www.supermeme.ai/"  target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Supermeme AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://preview.redd.it/what-are-your-thoughts-on-notion-ai-has-it-truly-simplified-v0-2telgdckvbmc1.jpg?width=400&format=pjpg&auto=webp&s=ca8fca67ac9c39e086571875be24b2988cf3af5a" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">3</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://www.notion.so/product/ai" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://i.insider.com/62a1383a2253ea001951d5ec?width=700"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Ivan Zhao and Simon Last | Published on 30/11/2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://www.notion.so/product/ai" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Notion AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://i.gadgets360cdn.com/large/gemini_ai_1712227430613.jpg" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">4</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="gemini.google.com/faq?hl=en" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://media.wired.com/photos/656ff1407599da22da60d6c4/master/pass/Demis-Hassabis-Interview-Business-1760047727.jpg"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Sergey Brin & Others | Published on 6/12/2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="/blog/slug"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Gemini AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://www.pymnts.com/wp-content/uploads/2023/11/character.ai-2.jpg" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">5</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://character.ai/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://api.time.com/wp-content/uploads/2023/09/Shazeer.jpg"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Noam Shazeer | Published on 30/9/2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://character.ai/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Character AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://www.prayananimation.com/blog/wp-content/uploads/2023/03/Adobe-ai.jpg" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">6</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdE3aTkfQL_4jXy3eAvGIviyCrs-UgZ8ZD4g&s"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Dr. John Warnock | Published on 21/05/2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://www.adobe.com/products/firefly.html" target="_blank" 
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Adobe Firefly AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOxoOp-0ihYAZ81CnrQ65aszN5Hh7m9e9U0A&s" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">7</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://www.synthesia.io/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqRsd10w8mKKMXViHXIqFB4ivBVOYuVBC6t2ONbAdkGzt-ECGQ"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Victor Riparbelli | Published on 2017</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://www.synthesia.io/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Synthesia AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://www.webfx.com/wp-content/uploads/2023/07/what-is-openai.png" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">8</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://openai.com/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://www.techopedia.com/wp-content/uploads/2023/10/1390x1248-Who-Owns-OpenAI_.png"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Elon Musk & Others | Published on 11/12/2015</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://openai.com/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Open AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 -->
+
+                    <article
+                        class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://mma.prnewswire.com/media/1459288/QuillBot_logo.jpg?p=twitter" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">9</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://quillbot.com/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIBbKJhz8Zfc8uU39B70HuYISOSSDdN5jAw&s"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Rohan Gupta | Published on 21/8/2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://quillbot.com/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Quillbot AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+
+                    <!-- Card 10 -->
+
+                    <article
+                        class="bg-white p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+                        <a target="_self" href="/blog/slug"
+                            class="absolute opacity-0 top-0 right-0 left-0 bottom-0"></a>
+                        <div class="relative mb-4 rounded-2xl">
+                            <img class="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                src="https://img.atom.com/story_images/visual_images/1713743525-Nova1.png?class=show" alt="">
+                            <div
+                                class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-red-700">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                                <span class="ml-1 text-sm text-slate-400">10</span>
+
+                            </div>
+
+                            <a class="flex justify-center items-center bg-red-400 bg-opacity-80 z-10 absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
+                                href="https://novaapp.ai/" target="_blank" rel="noopener noreferrer">
+                                Learn More
+                                <svg class="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex justify-between items-center w-full pb-4 mb-auto">
+                            <div class="flex items-center">
+                                <div class="pr-3">
+                                    <img class="h-12 w-12 rounded-full object-cover" src="https://techcrunch.com/wp-content/uploads/2024/04/NovaAITeam-e1713983485927.jpg"
+                                        alt="">
+                                </div>
+                                <div class="flex flex-1">
+                                    <div class="">
+                                        <p class="text-sm text-gray-500">Michael Moss & Others | Published on 2016</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-medium text-xl leading-8">
+                            <a href="https://novaapp.ai/" target="_blank"
+                                class="block relative group-hover:text-red-400 transition-colors duration-200 ">
+                                Learn More about Nova AI
+                            </a>
+                        </h3>
+                        <div>
+                        </div>
+                    </article>
+                 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
